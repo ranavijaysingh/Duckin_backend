@@ -13,7 +13,6 @@ const validateQuery = (query) => {
     }
   }
 
-  // Additional validation can be added here
   return true;
 };
 

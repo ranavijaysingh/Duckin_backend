@@ -1,12 +1,12 @@
 const parseCSV = (content) => {
-  const rows = content.split('\n').filter(row => row.trim() !== ''); // Filter out empty rows
-  const headers = rows[0].split(',').map(header => header.trim()); // Trim headers
+  const rows = content.split('\n').filter(row => row.trim() !== ''); 
+  const headers = rows[0].split(',').map(header => header.trim());
 
   const records = rows.slice(1).map(row => {
-    const values = row.split(',').map(value => value.trim()); // Trim values
+    const values = row.split(',').map(value => value.trim());
     const record = {};
     headers.forEach((header, index) => {
-      record[header] = values[index] !== undefined ? values[index] : null; // Handle missing values
+      record[header] = values[index] !== undefined ? values[index] : null;
     });
     return record;
   });

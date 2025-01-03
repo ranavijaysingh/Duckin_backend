@@ -1,6 +1,5 @@
 const generateCreateTableSQL = (tableName, columns) => {
   const columnsSQL = columns.map(column => `"${column}" VARCHAR`).join(', ');
-  console.log(`CREATE TABLE "${tableName}" (${columnsSQL})`);
   return `CREATE TABLE "${tableName}" (${columnsSQL})`;
 };
 

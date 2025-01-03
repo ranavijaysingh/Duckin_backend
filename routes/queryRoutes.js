@@ -6,7 +6,6 @@ const router = express.Router();
 
 const upload = multer({ storage: multer.memoryStorage() });
 
-// Define a simple route
 router.get('/', (req, res) => {
     res.send('Hello, this is the query route!');
 });
