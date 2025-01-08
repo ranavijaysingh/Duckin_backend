@@ -2,7 +2,6 @@ const duckdb = require('duckdb');
 
 class Database {
   constructor() {
-    // Use in-memory database for WebContainer environment
     this.db = new duckdb.Database(':memory:');
     this.initializeDatabase();
   }
